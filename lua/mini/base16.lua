@@ -798,19 +798,6 @@ H.apply_palette = function(palette, use_cterm)
     hi('BufferLineTabSelected',         {fg=p.base00, bg=p.base0A, attr='bold', sp=nil})
   end
 
-  if H.has_integration('anuvyklack/hydra.nvim') then
-    hi('HydraRed',      {fg=p.base08, bg=nil, attr=nil, sp=nil})
-    hi('HydraBlue',     {fg=p.base0D, bg=nil, attr=nil, sp=nil})
-    hi('HydraAmaranth', {fg=p.base0E, bg=nil, attr=nil, sp=nil})
-    hi('HydraTeal',     {fg=p.base0B, bg=nil, attr=nil, sp=nil})
-    hi('HydraPink',     {fg=p.base09, bg=nil, attr=nil, sp=nil})
-    hi('HydraHint',     {link='NormalFloat'})
-  end
-
-  if H.has_integration('DanilaMihailov/beacon.nvim') then
-    hi('Beacon', {fg=nil, bg=p.base07, attr=nil, sp=nil})
-  end
-
   if H.has_integration('folke/lazy.nvim') then
     hi('LazyButton',       {fg=nil,      bg=p.base01, attr=nil,    sp=nil})
     hi('LazyButtonActive', {fg=nil,      bg=p.base02, attr=nil,    sp=nil})
@@ -819,40 +806,8 @@ H.apply_palette = function(palette, use_cterm)
     hi('LazyProgressTodo', {fg=p.base03, bg=p.base00, attr=nil,    sp=nil})
   end
 
-  if H.has_integration('folke/noice.nvim') then
-    hi('NoiceCmdlinePopupBorder', {fg=p.base0D, bg=nil, attr=nil, sp=nil})
-    hi('NoiceConfirmBorder',      {fg=p.base0E, bg=nil, attr=nil, sp=nil})
-  end
-
-  -- folke/trouble.nvim
-  if H.has_integration('folke/trouble.nvim') then
-    hi('TroubleCount',           {fg=p.base0B, bg=nil, attr='bold', sp=nil})
-    hi('TroubleFoldIcon',        {fg=p.base05, bg=nil, attr=nil,    sp=nil})
-    hi('TroubleIndent',          {fg=p.base02, bg=nil, attr=nil,    sp=nil})
-    hi('TroubleLocation',        {fg=p.base04, bg=nil, attr=nil,    sp=nil})
-    hi('TroubleSignError',       {link='DiagnosticError'})
-    hi('TroubleSignHint',        {link='DiagnosticHint'})
-    hi('TroubleSignInformation', {link='DiagnosticInfo'})
-    hi('TroubleSignOther',       {link='DiagnosticInfo'})
-    hi('TroubleSignWarning',     {link='DiagnosticWarn'})
-    hi('TroubleText',            {fg=p.base05, bg=nil, attr=nil,    sp=nil})
-    hi('TroubleTextError',       {link='TroubleText'})
-    hi('TroubleTextHint',        {link='TroubleText'})
-    hi('TroubleTextInformation', {link='TroubleText'})
-    hi('TroubleTextWarning',     {link='TroubleText'})
-  end
-
   -- folke/todo-comments.nvim
   -- Everything works correctly out of the box
-
-  if H.has_integration('folke/which-key.nvim') then
-    hi('WhichKey',          {fg=p.base0D, bg=nil,      attr=nil, sp=nil})
-    hi('WhichKeyDesc',      {fg=p.base05, bg=nil,      attr=nil, sp=nil})
-    hi('WhichKeyFloat',     {fg=p.base05, bg=p.base01, attr=nil, sp=nil})
-    hi('WhichKeyGroup',     {fg=p.base0E, bg=nil,      attr=nil, sp=nil})
-    hi('WhichKeySeparator', {fg=p.base0B, bg=p.base01, attr=nil, sp=nil})
-    hi('WhichKeyValue',     {fg=p.base03, bg=nil,      attr=nil, sp=nil})
-  end
 
   if H.has_integration('hrsh7th/nvim-cmp') then
     hi('CmpItemAbbr',           {fg=p.base05, bg=nil,      attr=nil,    sp=nil})
@@ -887,16 +842,6 @@ H.apply_palette = function(palette, use_cterm)
     hi('CmpItemKindUnit',          {link='Special'})
     hi('CmpItemKindValue',         {link='Identifier'})
     hi('CmpItemKindVariable',      {link='Delimiter'})
-  end
-
-  if H.has_integration('justinmk/vim-sneak') then
-    hi('Sneak',      {fg=p.base00, bg=p.base0E, attr=nil,    sp=nil})
-    hi('SneakScope', {fg=p.base00, bg=p.base07, attr=nil,    sp=nil})
-    hi('SneakLabel', {fg=p.base00, bg=p.base0E, attr='bold', sp=nil})
-  end
-
-  if H.has_integration('folke/flash.nvim') then
-    hi('FlashLabel', {fg=p.base00, bg=p.base0E, attr='bold', sp=nil})
   end
 
   -- 'kevinhwang91/nvim-ufo'
@@ -941,56 +886,26 @@ H.apply_palette = function(palette, use_cterm)
     hi('IndentBlanklineIndent8',      {fg=p.base0F, bg=nil, attr='nocombine',           sp=nil})
   end
 
-  if H.has_integration('neoclide/coc.nvim') then
-    hi('CocCodeLens',             {link='LspCodeLens'})
-    hi('CocDisabled',             {link='Comment'})
-    hi('CocFadeOut',              {link='Comment'})
-    hi('CocMarkdownLink',         {fg=p.base0F, bg=nil,      attr=nil, sp=nil})
-    hi('CocMenuSel',              {fg=nil,      bg=p.base02, attr=nil, sp=nil})
-    hi('CocNotificationProgress', {link='CocMarkdownLink'})
-    hi('CocPumVirtualText',       {link='CocMarkdownLink'})
-    hi('CocSearch',               {fg=p.base0A, bg=nil,      attr=nil, sp=nil})
-    hi('CocSelectedText',         {fg=p.base08, bg=nil,      attr=nil, sp=nil})
-  end
-
   -- nvim-lualine/lualine.nvim
   -- Everything works correctly out of the box
 
-  if H.has_integration("nvim-telescope/telescope.nvim") then
-    local darkerbg = H.darken(p.base00, 0.1)
-    local darkercursorline = H.darken(p.base01, 0.1)
-    local darkerstatusline = H.darken(p.base02, 0.1)
-    hi("TelescopeBorder", { fg = darkerbg, bg = darkerbg, attr = nil, sp = nil })
-    hi("TelescopePromptBorder", { fg = darkerstatusline, bg = darkerstatusline, attr = nil, sp = nil })
-    hi("TelescopePromptNormal", { fg = p.base05, bg = darkerstatusline, attr = nil, sp = nil })
-    hi("TelescopePromptPrefix", { fg = p.base08, bg = darkerstatusline, attr = nil, sp = nil })
-    hi("TelescopeNormal", { fg = nil, bg = darkerbg, attr = nil, sp = nil })
-    hi("TelescopePreviewTitle", { fg = darkercursorline, bg = p.base0B, attr = nil, sp = nil })
-    hi("TelescopePromptTitle", { fg = darkercursorline, bg = p.base08, attr = nil, sp = nil })
-    hi("TelescopeResultsTitle", { fg = darkerbg, bg = darkerbg, attr = nil, sp = nil })
-    hi("TelescopeSelection", { fg = nil, bg = darkerstatusline, attr = nil, sp = nil })
-    hi("TelescopePreviewLine", { fg = nil, bg = p.base01, attr = "none", sp = nil })
+  if H.has_integration('rcarriga/nvim-notify') then
+    hi('NotifyDEBUGBorder', {fg=p.base03, bg=nil, attr=nil, sp=nil})
+    hi('NotifyDEBUGIcon',   {link='NotifyDEBUGBorder'})
+    hi('NotifyDEBUGTitle',  {link='NotifyDEBUGBorder'})
+    hi('NotifyERRORBorder', {fg=p.base08, bg=nil, attr=nil, sp=nil})
+    hi('NotifyERRORIcon',   {link='NotifyERRORBorder'})
+    hi('NotifyERRORTitle',  {link='NotifyERRORBorder'})
+    hi('NotifyINFOBorder',  {fg=p.base0C, bg=nil, attr=nil, sp=nil})
+    hi('NotifyINFOIcon',    {link='NotifyINFOBorder'})
+    hi('NotifyINFOTitle',   {link='NotifyINFOBorder'})
+    hi('NotifyTRACEBorder', {fg=p.base0D, bg=nil, attr=nil, sp=nil})
+    hi('NotifyTRACEIcon',   {link='NotifyTRACEBorder'})
+    hi('NotifyTRACETitle',  {link='NotifyTRACEBorder'})
+    hi('NotifyWARNBorder',  {fg=p.base0E, bg=nil, attr=nil, sp=nil})
+    hi('NotifyWARNIcon',    {link='NotifyWARNBorder'})
+    hi('NotifyWARNTitle',   {link='NotifyWARNBorder'})
   end
-
-  if H.has_integration('rcarriga/nvim-dap-ui') then
-    hi('DapUIScope',                   {link='Title'})
-    hi('DapUIType',                    {link='Type'})
-    hi('DapUIModifiedValue',           {fg=p.base0E, bg=nil, attr='bold', sp=nil})
-    hi('DapUIDecoration',              {link='Title'})
-    hi('DapUIThread',                  {link='String'})
-    hi('DapUIStoppedThread',           {link='Title'})
-    hi('DapUISource',                  {link='Directory'})
-    hi('DapUILineNumber',              {link='Title'})
-    hi('DapUIFloatBorder',             {link='SpecialChar'})
-    hi('DapUIWatchesEmpty',            {link='ErrorMsg'})
-    hi('DapUIWatchesValue',            {link='String'})
-    hi('DapUIWatchesError',            {link='DiagnosticError'})
-    hi('DapUIBreakpointsPath',         {link='Directory'})
-    hi('DapUIBreakpointsInfo',         {link='DiagnosticInfo'})
-    hi('DapUIBreakpointsCurrentLine',  {fg=p.base0B, bg=nil, attr='bold', sp=nil})
-    hi('DapUIBreakpointsDisabledLine', {link='Comment'})
-  end
-
 
   -- stevearc/aerial.nvim
   -- Everything works correctly out of the box
