@@ -844,6 +844,34 @@ H.apply_palette = function(palette, use_cterm)
     hi('CmpItemKindVariable',      {link='Delimiter'})
   end
 
+  if H.has_integration('saghen/blink.cmp') then
+    hi('BlinkCmpKindClass',         {link='Type'})
+    hi('BlinkCmpKindColor',         {link='Special'})
+    hi('BlinkCmpKindConstant',      {link='Constant'})
+    hi('BlinkCmpKindConstructor',   {link='Type'})
+    hi('BlinkCmpKindEnum',          {link='Structure'})
+    hi('BlinkCmpKindEnumMember',    {link='Structure'})
+    hi('BlinkCmpKindEvent',         {link='Exception'})
+    hi('BlinkCmpKindField',         {link='Structure'})
+    hi('BlinkCmpKindFile',          {link='Tag'})
+    hi('BlinkCmpKindFolder',        {link='Directory'})
+    hi('BlinkCmpKindFunction',      {link='Function'})
+    hi('BlinkCmpKindInterface',     {link='Structure'})
+    hi('BlinkCmpKindKeyword',       {link='Keyword'})
+    hi('BlinkCmpKindMethod',        {link='Function'})
+    hi('BlinkCmpKindModule',        {link='Structure'})
+    hi('BlinkCmpKindOperator',      {link='Operator'})
+    hi('BlinkCmpKindProperty',      {link='Structure'})
+    hi('BlinkCmpKindReference',     {link='Tag'})
+    hi('BlinkCmpKindSnippet',       {link='Special'})
+    hi('BlinkCmpKindStruct',        {link='Structure'})
+    hi('BlinkCmpKindText',          {link='Statement'})
+    hi('BlinkCmpKindTypeParameter', {link='Type'})
+    hi('BlinkCmpKindUnit',          {link='Special'})
+    hi('BlinkCmpKindValue',         {link='Identifier'})
+    hi('BlinkCmpKindVariable',      {link='Delimiter'})
+  end
+
   -- 'kevinhwang91/nvim-ufo'
   -- Everything works correctly out of the box
 
