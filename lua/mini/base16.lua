@@ -872,6 +872,11 @@ H.apply_palette = function(palette, use_cterm)
     hi('BlinkCmpKindVariable',      {link='Delimiter'})
   end
 
+  if H.has_integration('ibhagwan/fzf-lua') then
+    hi('FzfLuaBorder', {fg=p.base01, bg=nil, attr=nil, sp=nil})
+    hi('FzfLuaTitle',  {fg=p.base05, bg=nil, attr=nil, sp=nil})
+  end
+
   -- 'kevinhwang91/nvim-ufo'
   -- Everything works correctly out of the box
 
