@@ -628,6 +628,10 @@ H.apply_palette = function(palette, use_cterm)
   hi('@text.strike',    {fg=nil, bg=nil, attr='strikethrough', sp=nil})
   hi('@text.underline', {link='Underlined'})
 
+  -- Self-defined highlight groups
+  hi('FloatBorder', {fg=p.base01, bg=nil, attr=nil, sp=nil})
+  hi('FloatTitle',  {fg=p.base05, bg=nil, attr=nil, sp=nil})
+
 
 
   -- Semantic tokens
@@ -841,7 +845,7 @@ H.apply_palette = function(palette, use_cterm)
     hi('CmpItemKindTypeParameter', {link='Type'})
     hi('CmpItemKindUnit',          {link='Special'})
     hi('CmpItemKindValue',         {link='Identifier'})
-    hi('CmpItemKindVariable',      {link='Delimiter'})
+    hi('CmpItemKindVariable',      {link='Operator'})
   end
 
   if H.has_integration('saghen/blink.cmp') then
@@ -869,12 +873,13 @@ H.apply_palette = function(palette, use_cterm)
     hi('BlinkCmpKindTypeParameter', {link='Type'})
     hi('BlinkCmpKindUnit',          {link='Special'})
     hi('BlinkCmpKindValue',         {link='Identifier'})
-    hi('BlinkCmpKindVariable',      {link='Delimiter'})
+    hi('BlinkCmpKindVariable',      {link='Operator'})
+    hi('BlinkCmpDocBorder',         {link='FloatBorder'})
   end
 
   if H.has_integration('ibhagwan/fzf-lua') then
-    hi('FzfLuaBorder', {fg=p.base01, bg=nil, attr=nil, sp=nil})
-    hi('FzfLuaTitle',  {fg=p.base05, bg=nil, attr=nil, sp=nil})
+    hi('FzfLuaBorder', {link='FloatBorder'})
+    hi('FzfLuaTitle',  {link='FloatTitle'})
   end
 
   -- 'kevinhwang91/nvim-ufo'
