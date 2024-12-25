@@ -914,17 +914,9 @@ H.apply_palette = function(palette, use_cterm)
   end
 
   if H.has_integration('lukas-reineke/indent-blankline.nvim') then
-    hi('IndentBlanklineChar',         {fg=p.base02, bg=nil, attr='nocombine',           sp=nil})
-    hi('IndentBlanklineContextChar',  {fg=p.base0F, bg=nil, attr='nocombine',           sp=nil})
-    hi('IndentBlanklineContextStart', {fg=nil,      bg=nil, attr='underline,nocombine', sp=p.base0F})
-    hi('IndentBlanklineIndent1',      {fg=p.base08, bg=nil, attr='nocombine',           sp=nil})
-    hi('IndentBlanklineIndent2',      {fg=p.base09, bg=nil, attr='nocombine',           sp=nil})
-    hi('IndentBlanklineIndent3',      {fg=p.base0A, bg=nil, attr='nocombine',           sp=nil})
-    hi('IndentBlanklineIndent4',      {fg=p.base0B, bg=nil, attr='nocombine',           sp=nil})
-    hi('IndentBlanklineIndent5',      {fg=p.base0C, bg=nil, attr='nocombine',           sp=nil})
-    hi('IndentBlanklineIndent6',      {fg=p.base0D, bg=nil, attr='nocombine',           sp=nil})
-    hi('IndentBlanklineIndent7',      {fg=p.base0E, bg=nil, attr='nocombine',           sp=nil})
-    hi('IndentBlanklineIndent8',      {fg=p.base0F, bg=nil, attr='nocombine',           sp=nil})
+    hi('IblIndent',         {fg=p.base01, bg=nil, attr='nocombine', sp=nil})
+    hi('IblWhitespace',     {fg=p.base01, bg=nil, attr='nocombine', sp=nil})
+    hi('IblScope',          {fg=p.base02, bg=nil, attr='nocombine', sp=nil})
   end
 
   -- nvim-lualine/lualine.nvim
